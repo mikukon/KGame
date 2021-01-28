@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     >
+
+    <SurfaceView
+        android:id="@+id/surface"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+	
+  
+    <com.yiqiding.ktvbox.widget.KGDafengView
+        android:id="@+id/sv_kg"
+        android:layout_width="fill_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+         />
+
+ 	 <com.yiqiding.ktvbox.widget.imageViewWithAnimation
+ 	     android:id="@+id/ping_jia_view"
+ 	     android:layout_width="wrap_content"
+ 	     android:layout_height="wrap_content"
+ 	     android:layout_above="@+id/sv_kg"
+ 	     android:layout_marginLeft="426dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="KGAME"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:id="@+id/pic_file"
+        android:background="@drawable/yichang"
+        android:textStyle="italic|bold" />
+
+    <Button
+        android:id="@+id/exit"
+        android:background="@drawable/weichang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:text="退   出" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:orientation="horizontal" >
+        
+        <Button
+            android:id="@+id/recordTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="记录时间" 
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tips"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@android:color/white" />
+        
+		<EditText
+            android:id="@+id/resourceIp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+			android:text="192.168.20.28"
+            android:hint="type must be like : 192.168.1.199"
+            android:visibility="gone"
+            />
+<!--             android:text="192.168.60.85" -->
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:hint="serialid"
+            android:visibility="gone"
+            android:inputType="numberSigned" />
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="播这首" />
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="开   始" />
+
+        <Button
+            android:id="@+id/reload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重新加载" />
+        
+        <Button
+            android:id="@+id/restart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="重   唱" />
+
+        <Button
+            android:id="@+id/pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上一首" />
+        
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下一首" />
+        <Button
+            android:id="@+id/switchOriginal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="切换原伴唱" />
+        <ToggleButton
+            android:id="@+id/pauseStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="暂停"
+            android:textOff="播放"
+            android:visibility="gone"
+            android:checked="true"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/pic_file"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFE610"
+        android:textSize="35sp"
+        android:text="0" />
+
+    <com.r3studio.KGame.gl.MGLSurfaceView
+        android:id="@+id/msv"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        />
+</RelativeLayout>

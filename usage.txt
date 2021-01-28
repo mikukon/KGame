@@ -1,0 +1,4 @@
+adb push tsp_list.txt /sdcard/
+adb shell mkdir /sdcard/kg_temps/
+adb push 01.1234567.0.1.kgame /sdcard/kg_temps/ 
+adb push 1234567.mpg /sdcard/
